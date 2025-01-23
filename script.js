@@ -24,6 +24,7 @@ function getWeather() {
             const condition = data.current.condition.text;
             const humidity = `Humidity: ${data.current.humidity}%`;
             const wind = `Wind: ${data.current.wind_kph} kph`;
+            const iconUrl = data.current.condition.icon;
 
             // Displaying the weather information
             document.getElementById('location-name').textContent = locationName;
@@ -31,6 +32,7 @@ function getWeather() {
             document.getElementById('condition').textContent = condition;
             document.getElementById('humidity').textContent = humidity;
             document.getElementById('wind').textContent = wind;
+            document.getElementById('weather-icon').src = `http:${iconUrl}`;
         })
         .catch(error => {
             console.error('Error fetching weather data:', error);

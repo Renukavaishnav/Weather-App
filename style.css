@@ -1,47 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f2f2f2;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #83a4d4, #b6fbff);
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-size: cover;
 }
 
 .weather-container {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 30px;
+    width: 350px;
     text-align: center;
-    width: 300px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 h1 {
-    font-size: 24px;
+    font-size: 28px;
+    color: #333;
     margin-bottom: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
 }
 
 input {
     width: 80%;
-    padding: 8px;
-    margin-bottom: 10px;
+    padding: 12px;
+    margin-bottom: 15px;
     font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    border-radius: 8px;
+    border: 2px solid #6c9ee1;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #3498db;
 }
 
 button {
-    padding: 10px 15px;
-    background-color: #4CAF50;
+    width: 85%;
+    padding: 12px;
+    background-color: #3498db;
     color: white;
+    font-size: 18px;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #2980b9;
 }
 
 #weather-info {
@@ -49,6 +67,18 @@ button:hover {
 }
 
 #weather-info p {
-    margin: 5px 0;
     font-size: 18px;
+    color: #333;
+    margin: 8px 0;
+    font-weight: 500;
+}
+
+#weather-icon {
+    margin-top: 15px;
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #fff;
+    padding: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
